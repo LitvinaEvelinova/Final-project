@@ -30,6 +30,8 @@ function displayTemperature(response) {
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -44,8 +46,27 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }
 
+function displayFahrnheit(event) {
+    event.preventDefault();
+    let fahrnheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(fahrnheitTemperature);
+}
+function displayCelsius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrnheitUnit = document.querySelector("#fahrnheit-unit");
+fahrnheitUnit.addEventListener("click", displayFahrnheit);
+let celsiusUnit = document.querySelector("#celsius-unit");
+celsiusUnit.addEventListener("click", displayCelsius);
+
+let celsiusTemperature = null;
 
 search("Mariupol");

@@ -11,6 +11,9 @@
 </head>
 <body>
 <div class="container">
+  <div class="card text-white">
+        <img src="media/nature.jpg" class="card-image" alt="nature-background" id="card-image" />
+        <div class="card-img-overlay">
     <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3">
@@ -19,12 +22,12 @@
             <input type="search" placeholder="Find your city" class="form-control" id="city-input" />
             </div>
             <div class="col-2">
-            <input type="submit" value="Search" class="btn btn-primary"/>
+            <input type="submit" value="Search" class="btn btn-outline-info"/>
             </div>
-            <button id="button-location" class="btn btn-primary"> Your current location </button>
+            <button id="button-location" class="btn btn-outline-info" class="locationButton"> Your current location </button>
             </div>
           </form>
-
+<div class="mainInfo">
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -50,7 +53,7 @@
               </ul>
             </div>
           </div>
-          <div class="weather-forecast" id="forecast"></div>
+        </div>
         </div>
         </div>
         <small>

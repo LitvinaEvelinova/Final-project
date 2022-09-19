@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: #00204a;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -21,7 +21,7 @@ li {
   margin: 0;
   padding: 0;
 
-  color: rgb(135, 135, 135);
+color: #00204a;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -38,12 +38,19 @@ small {
   text-align: center;
 }
 
-button {
- margin-top: 40px;
- 
+.card-image {
+    height: 400px;
+    width: 100%;
 }
+
 .btn {
   margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #005792; 
+}
+
+button {
+  width: 560px;
 }
 
 .weather-app-wrapper {
@@ -60,7 +67,13 @@ button {
 .overview {
   margin-bottom: 20px;
 }
-
+ 
+.mainInfo {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: 1px solid #0dcaf0;
+  border-radius: 5px;
+  color: #00204a;
+}
 .weather-temperature img {
   margin-right: 5px;
   height: 64px;
@@ -72,6 +85,7 @@ button {
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
+  color: #00204a;
 }
 
 .weather-temperature .units {
@@ -92,13 +106,15 @@ button {
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
+  color: #00204a;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  color: #00204a;
 }
 
 .weather-forecast-temperatures {
   font-size: 13px;
+  color: #00204a;
+  
 }

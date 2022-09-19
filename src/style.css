@@ -34,6 +34,17 @@ li:first-letter {
 img {
     width: 70px;
 } 
+small {
+  text-align: center;
+}
+
+button {
+ margin-top: 40px;
+ 
+}
+.btn {
+  margin-bottom: 15px;
+}
 
 .weather-app-wrapper {
   max-width: 600px;
